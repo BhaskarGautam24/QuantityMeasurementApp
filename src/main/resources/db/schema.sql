@@ -1,8 +1,8 @@
-CREATE TABLE quantity_measurement_entity (
-
-id INT AUTO_INCREMENT PRIMARY KEY,
-operation VARCHAR(50),
-this_quantity VARCHAR(100),
-that_quantity VARCHAR(100),
-result VARCHAR(100),
-created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP);
+CREATE TABLE IF NOT EXISTS quantity_measurements (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    operation VARCHAR(50),
+    operand1 VARCHAR(100),
+    operand2 VARCHAR(100),
+    result VARCHAR(100),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
