@@ -1,0 +1,32 @@
+server:
+  port: 8082
+
+spring:
+  application:
+    name: user-service
+  datasource:
+    url: jdbc:mysql://localhost:3306/quantitydb1
+    username: root
+    password: Password@123
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    database-platform: org.hibernate.dialect.MySQLDialect
+
+jwt:
+  secret: ThisIsASecretKeyForJWTQuantityMeasurementApp2024
+  expiration: 86400000
+
+# Google OAuth2
+google:
+  client-id: 935608463539-8onmv2en6rmn7h489gthdn9prjata2au.apps.googleusercontent.com
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+    fetch-registry: true
+    register-with-eureka: true
+  instance:
+    prefer-ip-address: true
